@@ -60,14 +60,14 @@ Predictions on an image without defects
 
 ![](/images/no_defect_image_initial.jpg)
 ![](/images/no_defect_image_Dice.jpg)
-_Top: Actual defects
+_Top: Actual defects  
 Bottom: predicted defects_
 
 The model predicts isolated defect pixels. This makes the model unusable for production as it predicts many false positives.
 
 ![](/images/test_norm_Dice_confMat.jpg)
-_Rows represent actual number of defect classes
-Columns represent predicted number of defect classes
+_Rows represent actual number of defect classes  
+Columns represent predicted number of defect classes  
 The model always predicts a few pixels from each class_
 
 Final Results: training the model with Cross entropy
@@ -85,8 +85,9 @@ Even though both models seem comparable at image level, the confusion matrix is 
 
 ![](/images/test_norm_CE_confMat.jpg)
 
-Also, on test set, exact dice accuracy jumps to 75% (from 15% using smooth dice for training).  On the validation set, accuracy is 72%.  
-
+Exact dice accuracy results:
+Test set: 75%
+Validation set: 72%
 
 
 Next step: library https://github.com/qubvel/segmentation_models.pytorch for additional model testing with transfer learning.
